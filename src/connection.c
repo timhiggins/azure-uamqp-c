@@ -1913,3 +1913,23 @@ int connection_set_remote_idle_timeout_empty_frame_send_ratio(CONNECTION_HANDLE 
 
     return result;
 }
+
+int connection_get_state(CONNECTION_HANDLE connection, CONNECTION_STATE *p_cstate)
+{
+    int result;
+    if (connection == NULL)
+    {
+        result = __LINE__;
+    }
+    else if (p_cstate == NULL)
+    {
+        result = __LINE__;
+    }
+    else
+    {
+        *p_cstate = connection->connection_state;
+                result = 0;
+    }
+    return result;
+}
+
