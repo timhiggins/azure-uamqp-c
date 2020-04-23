@@ -7,6 +7,3 @@
 [submodule "deps/azure-c-testrunnerswitcher"]
 	path = deps/azure-c-testrunnerswitcher
 	url = https://www.github.com/Azure/azure-c-testrunnerswitcher
-[submodule "deps/git@github.com:timhiggins/azure-c-shared-utility.git"]
-	path = deps/git@github.com:timhiggins/azure-c-shared-utility.git
-	url = git@github.com:timhiggins/azure-c-shared-utility.git
