@@ -142,6 +142,11 @@ add_library(uamqp
 
 target_link_libraries(uamqp aziotsharedutil)
 
+# Hach - Configure so any target which depends on this library automatically has the appropriate include directories 
+# added to its own, so explicit call to include_directories is not required.
+target_include_directories(uamqp PUBLIC ${CMAKE_CURRENT_LIST_DIR}/inc)
+# Hach 
+
 if (NOT ${skip_samples})
     add_subdirectory(samples)
 endif()
