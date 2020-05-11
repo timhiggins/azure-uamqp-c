@@ -37,3 +37,7 @@ endif()
 else()
 	target_link_libraries(eh_sender_with_sas_token_sample	uamqp aziotsharedutil ${OPENSSL_LIBRARIES})
 endif()
+
+# Hach - suppress 'will be initialized after [-Werror=unused-value] warning'
+target_compile_options(eh_sender_with_sas_token_sample PRIVATE -Wno-error=unused-value)
+# Hach

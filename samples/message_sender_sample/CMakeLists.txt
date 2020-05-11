@@ -35,3 +35,7 @@ else()
         target_link_libraries(message_sender_sample ${OPENSSL_LIBRARIES})
 
 endif()
+
+# Hach - suppress 'will be initialized after [-Werror=unused-value] warning'
+target_compile_options(message_sender_sample PRIVATE -Wno-error=unused-value)
+# Hach

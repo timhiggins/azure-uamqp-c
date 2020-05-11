@@ -33,3 +33,7 @@ endif()
 else()
 	target_link_libraries(local_client_sample	uamqp aziotsharedutil)
 endif()
+
+# Hach - suppress 'will be initialized after [-Werror=unused-value] warning'
+target_compile_options(local_client_sample PRIVATE -Wno-error=unused-value)
+# Hach

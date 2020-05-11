@@ -33,3 +33,8 @@ endif()
 else()
 	target_link_libraries(mssbcbs_sample uamqp aziotsharedutil ${OPENSSL_LIBRARIES})
 endif()
+
+# Hach - suppress 'will be initialized after [-Werror=unused-value] warning'
+target_compile_options(mssbcbs_sample PRIVATE -Wno-error=unused-but-set-variable)
+target_compile_options(mssbcbs_sample PRIVATE -Wno-error=unused-value)
+# Hach

@@ -23,3 +23,7 @@ endif()
 endif()
 
 add_sample_directory(websockets_sample)
+
+# Hach - suppress 'will be initialized after [-Werror=unused-value] warning'
+target_compile_options(websockets_sample PRIVATE -Wno-error=unused-value)
+# Hach
